@@ -1,37 +1,30 @@
+import disneyData from "../src/data/disney/characters.json" assert { type: "jsons" };
 
-
-console.log("script funcionando")
-
-/*import data from "../src/data/disney/characters.json" assert { type: "json"};
-
-var dataListDisney = data
-var htmlShow = document.getElementById("content")
-var allHtmlShowInfos;
+var dataListDisney = disneyData.data;
+let htmlShow = document.getElementById("card-container");
+let allHtmlShowInfos = "";
 
 function displayNames(data) {
-    allHtmlShowInfos = data.map ({{ name , imageUrl}} => {
-        return (allHtmlShowInfos =  
-            `<div class="card" id="card">
-            <div class="gridContainerUp" id="gridContainerUp">
-            <div class="title" id="title">${name}</div>
-            <div class="title" id="title">${imageUrl}</div>
-            </div>
-          </div>`)
-        });
+  allHtmlShowInfos = data.map(({ films, shortFilms, videoGames, parkAttractions, allies, enemies, _id, name, imageUrl, url }) => {
+    return `<div class="card" id="card">
+      <div class="gridContainerUp" id="gridContainerUp">
+        <div class="title">${films}</div>
+        <div class="title">${shortFilms}</div>
+        <div class="title">${videoGames}</div>
+        <div class="title">${parkAttractions}</div>
+        <div class="title">${allies}</div>
+        <div class="title">${enemies}</div>
+        <div class="title">${_id}</div>
+        <div class="title">${name}</div> 
+        <div class="title">${imageUrl}</div>
+        <div class="title">${url}</div>
+      </div>
+      <hr class="upline">
+      <div class="backgraundImg" id="backgroundImg"></div>
+    </div>`;
+  }).join("");
 
-
-htmlShow.innerHTML = allHtmlShowInfos.join("")
-
+  htmlShow.innerHTML = allHtmlShowInfos;
 }
 
-displayNames(dataListDisney)*/
-
-
-/*teste2
-import data from './data/movies/movies.json' assert {type: "json"};
-
-var filmes = data
-console.log(filmes)  */
-
-
-
+displayNames(dataListDisney);
