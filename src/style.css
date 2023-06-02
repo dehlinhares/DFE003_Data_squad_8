@@ -1,0 +1,43 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+/* Estilos para os cards */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.gridContainerUp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+/* Estilos para a linha horizontal */
+.upline {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+/* Estilos para a imagem de fundo */
+.backgraundImg {
+  background-image: url("path/to/your/image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
