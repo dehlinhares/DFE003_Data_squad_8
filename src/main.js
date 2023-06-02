@@ -2,9 +2,8 @@ import disney from "../src/data/disney/characters.json" assert {type: "json"}
 
 console.log(disney.data)
 
-/*import disneyData from "../src/data/disney/characters.json" assert { type: "jsons" };
 
-var dataListDisney = disneyData.data;
+var dataListDisney = disney.data;
 let htmlShow = document.getElementById("card-container");
 let allHtmlShowInfos = "";
 
@@ -31,4 +30,4 @@ function displayNames(data) {
   htmlShow.innerHTML = allHtmlShowInfos;
 }
 
-displayNames(dataListDisney);*/
+displayNames(dataListDisney);
