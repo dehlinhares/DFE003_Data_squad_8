@@ -1,13 +1,20 @@
-import disneyData from "../src/data/disney/characters.json" assert { type: "jsons" };
+import disney from "../src/data/disney/characters.json" assert {type: "json"};
 
-var dataListDisney = disneyData.data;
+var dataListDisney = disney.data;
 let htmlShow = document.getElementById("card-container");
 let allHtmlShowInfos = "";
 
 function displayNames(data) {
   allHtmlShowInfos = data.map(({ films, shortFilms, videoGames, parkAttractions, allies, enemies, _id, name, imageUrl, url }) => {
-    return `<div class="card" id="card">
+    let linkHtml = "";
+    if (url) {
+      linkHtml = `<a href="${url}">LINK</a>`;
+    }
+
+    return `
+    <div class="card" id="card">
       <div class="gridContainerUp" id="gridContainerUp">
+        <div class="title">${name}</div> 
         <div class="title">${films}</div>
         <div class="title">${shortFilms}</div>
         <div class="title">${videoGames}</div>
@@ -15,12 +22,11 @@ function displayNames(data) {
         <div class="title">${allies}</div>
         <div class="title">${enemies}</div>
         <div class="title">${_id}</div>
-        <div class="title">${name}</div> 
-        <div class="title">${imageUrl}</div>
-        <div class="title">${url}</div>
+        ${linkHtml}
       </div>
       <hr class="upline">
-      <div class="backgraundImg" id="backgroundImg"></div>
+      <div class="backgroundImg" id="backgroundImg"></div>
+      <img class="picture" src=${imageUrl}></img>
     </div>`;
   }).join("");
 
@@ -28,3 +34,4 @@ function displayNames(data) {
 }
 
 displayNames(dataListDisney);
+
