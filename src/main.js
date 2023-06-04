@@ -22,12 +22,14 @@ function displayNames(data) {
         <div class="title">${allies}</div>
         <div class="title">${enemies}</div>
         <div class="title">${_id}</div>
-        ${linkHtml}
+        
       </div>
       <hr class="upline">
       <div class="backgroundImg" id="backgroundImg"></div>
-      <img class="picture" src=${imageUrl}></img>
-    </div>`;
+      <img class="picture" src=${imageUrl}></img><br>
+      
+      ${linkHtml}
+      </div>`;
   }).join("");
 
   htmlShow.innerHTML = allHtmlShowInfos;
