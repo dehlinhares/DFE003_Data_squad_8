@@ -1,3 +1,4 @@
+
 import disney from "../src/data/disney/characters.json" assert {type: "json"};
 
 var dataListDisney = disney.data;
@@ -48,7 +49,7 @@ function displayNames(data) {
 
     let tvShowsHtml = "";
     if (Array.isArray(tvShows) && tvShows.length > 0) {
-      tvShowsHtml = `<div class="subtitle">Programas de TV:</div><div class="title">${tvShows}</div>`;
+      tvShowsHtml = `<div class="subtitle">Programas de Tv:</div><div class="title">${tvShows}</div>`;
     }
 
     return `
@@ -62,14 +63,15 @@ function displayNames(data) {
         ${parkAttractionsHtml}
         ${alliesHtml}
         ${enemiesHtml}
+        <img class="picture" src=${imageUrl}></img><br>
+        <div class="backgroundImg" id="backgroundImg"></div>
         <div class="title">${_id}</div>
-        
+        ${linkHtml}
       </div>
-      <hr class="upline">
-      <div class="backgroundImg" id="backgroundImg"></div>
-      <img class="picture" src=${imageUrl}></img><br>
+      
+      
 
-      ${linkHtml}
+     
       </div>`;
   }).join("");
 
