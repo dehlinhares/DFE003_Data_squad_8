@@ -1,82 +1,64 @@
-
 import disney from "../src/data/disney/characters.json" assert {type: "json"};
 
 var dataListDisney = disney.data;
-let htmlShow = document.getElementById("card-container");
+let htmlShow = document.getElementById("content");
 let allHtmlShowInfos = "";
 
 function displayNames(data) {
-  allHtmlShowInfos = data.map(({ films, shortFilms, videoGames, parkAttractions, allies, enemies, _id, name, imageUrl, url, tvShows }) => {
-    let linkHtml = "";
-    if (url) {
-      linkHtml = `<a href="${url}">LINK</a>`;
-    }
+  allHtmlShowInfos = data.map(({ films, videoGames, parkAttractions, allies, enemies, _id, name, imageUrl, tvShows }) => {
+    
 
     let nameHtml = "";
     if (name !== "") {
-      nameHtml = `<div class="subtitle">Personagem:</div><div class="title">${name}</div>`;
+      nameHtml = `<h3 class="subtitle">Personagem:</h3><h3 class="title">${name}</h3>`;
     }
 
     let filmsHtml = "";
     if (Array.isArray(films) && films.length > 0) {
-      filmsHtml = `<div class="subtitle">Filmes:</div><div class="title">${films}</div>`;
+      filmsHtml = `<h3 class="subtitle">Filme:</h3><h3 class="title">${films}</h3>`;
     }
 
-    let shortFilmsHtml = "";
-    if (Array.isArray(shortFilms) && shortFilms.length > 0) {
-      shortFilmsHtml = `<div class="subtitle">Curtas:</div><div class="title">${shortFilms}</div>`;
-    }
-   
-    let videoGamesHtml = "";
-    if (Array.isArray(videoGames) && videoGames.length > 0) {
-      videoGamesHtml = `<div class="subtitle">Games:</div><div class="title">${videoGames}</div>`;
-    }
     
     let parkAttractionsHtml = "";
     if (Array.isArray(parkAttractions) && parkAttractions.length > 0) {
-      parkAttractionsHtml = `<div class="subtitle">Brinquedo de parque:</div><div class="title">${parkAttractions}</div>`;
+      parkAttractionsHtml = `<h3 class="subtitle">Brinquedo de parque:</h3><h3 class="title">${parkAttractions}</h3>`;
     }
 
     let alliesHtml = "";
     if (Array.isArray(allies) && allies.length > 0) {
-      alliesHtml = `<div class="subtitle">Aliados:</div><div class="title">${allies}</div>`;
+      alliesHtml = `<h3 class="subtitle">Aliados:</h3><h3 class="title">${allies}</h3>`;
     }
     
     let enemiesHtml = "";
     if (Array.isArray(enemies) && enemies.length > 0) {
-      enemiesHtml = `<div class="subtitle">Inimigos:</div><div class="title">${enemies}</div>`;
+      enemiesHtml = `<h3 class="subtitle">Inimigos:</h3><h3 class="title">${enemies}</h3>`;
     }
 
-    let tvShowsHtml = "";
-    if (Array.isArray(tvShows) && tvShows.length > 0) {
-      tvShowsHtml = `<div class="subtitle">Programas de Tv:</div><div class="title">${tvShows}</div>`;
-    }
+
 
     return `
-    <div class="card" id="card">
-      <div class="gridContainerUp" id="gridContainerUp">
-        ${nameHtml} 
-        ${tvShowsHtml}
-        ${filmsHtml}
-        ${shortFilmsHtml}
-        ${videoGamesHtml}
-        ${parkAttractionsHtml}
-        ${alliesHtml}
-        ${enemiesHtml}
-        <img class="picture" src=${imageUrl}></img><br>
-        <div class="backgroundImg" id="backgroundImg"></div>
-        <div class="title">${_id}</div>
-        ${linkHtml}
+     <a class="card" href="#!">
+      <div class="front" style="background-image:url(${imageUrl})">
       </div>
-      
-      
 
-     
-      </div>`;
+     <div class="back">
+       <div>
+        <h4>${nameHtml}</h4>
+        <h4>${filmsHtml}</h4>
+        <h4>${parkAttractionsHtml}</h4>
+        <h4>${alliesHtml}</h4>
+        <h4>${enemiesHtml}</h4>
+      </div>  
+     </div>
+  </a>
+    `;
+      
   }).join("");
 
   htmlShow.innerHTML = allHtmlShowInfos;
 }
 
 displayNames(dataListDisney);
+
+
 
