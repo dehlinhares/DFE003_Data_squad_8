@@ -59,6 +59,3 @@ function displayNames(data) {
 }
 
 displayNames(dataListDisney);
-
-
-

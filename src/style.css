@@ -55,11 +55,30 @@ body {
     padding: 40px 5px 5px 5px;
     
 }
+
+
 .logoSquad8{
   width: 100px;
   border-radius: 50%;
+  animation: animaLogo;
+  animation-duration: 8s;
+  animation-delay: 2s;
   
 }
+
+/*animaçao do logo squad 8*/
+@keyframes animaLogo {
+  
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  75% { transform: scale(1.9); }
+  100% { transform: scale(1); }
+
+
+
+}
+
+
 
 .imgDisney {
   width:13rem;
@@ -300,6 +319,9 @@ a:hover{
     width: 100%;
   }
 }
+
+
+
 
 .front,
 .back {
