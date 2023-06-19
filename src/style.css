@@ -10,6 +10,13 @@ body {
   font-family: 'Roboto', sans-serif;
     font-size: 1.4em;
   }
+/*CSS DÉBORA*/
+.videoIntro{
+  width: 100%;
+  height: auto;
+  /*display: flex;*/
+
+}
 
   body::before {
    
