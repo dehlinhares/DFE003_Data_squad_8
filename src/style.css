@@ -53,6 +53,11 @@ body {
 .logo{
    
     padding: 40px 5px 5px 5px;
+    animation: animaLogo;
+    animation-duration: 8s;
+    animation-delay: 2s;
+  
+
     
 }
 
@@ -81,7 +86,8 @@ body {
 
 .imgDisney {
   width:13rem;
-  padding: 5px 5px 5px 5px;
+  padding: 0px 5px 5px 5px;
+  margin-top: 200px;
 }
 
 .image-float {
