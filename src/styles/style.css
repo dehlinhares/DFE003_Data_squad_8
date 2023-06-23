@@ -10,13 +10,7 @@ body {
   font-family: 'Roboto', sans-serif;
     font-size: 1.4em;
   }
-/*CSS DÉBORA*/
-.videoIntro{
-  width: 100%;
-  height: auto;
-  /*display: flex;*/
 
-}
 
   body::before {
    
@@ -44,6 +38,19 @@ body {
     flex-direction: column;
   
 }
+.item .itemLista{
+  color: white;
+  border: 2px solid white;
+  background-color: blue;
+  opacity: 0.5;
+  border-radius: 20px;
+  font-weight: 700;
+  width: auto;
+  height: 60px;
+  text-align: center;
+  padding: 20px;
+
+}
 
 
  .div_logo, h1, h2, summary {
@@ -58,9 +65,7 @@ body {
     animation: animaLogo;
     animation-duration: 8s;
     animation-delay: 2s;
-    
-  
-
+     
     
 }
 
@@ -108,10 +113,10 @@ body {
 
 h1{
   font-family: 'Mouse Memoirs', sans-serif;
-  padding: 20px 5px 0px 5px;
-  padding-top: 30px;
+  padding: 1px 5px 20px 5px;
+  padding-top: 10px;
   font-size: 1.9em;
-  color: white;
+  color:white;
   text-align: center;
   opacity:0.9;
 
