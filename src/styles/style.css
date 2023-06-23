@@ -1,14 +1,17 @@
-/* CSS DAYANA */
 
-@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto:wght@400&display=swap');
 
 
+*{
+  margin:0 ;
+  padding:0;
+  box-sizing: border-box;
+}
+
 body {
-      
-  
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4em;
+    max-width: 100vw;
   }
 
 
@@ -17,56 +20,30 @@ body {
      content: "";
       background: url(https://e1.pxfuel.com/desktop-wallpaper/927/136/desktop-wallpaper-cute-disney-castle-disney-palace.jpg);
       background-position:top;
-      opacity: 0.8;
+      opacity: 0.7;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
       position:fixed;
       z-index: -1;   
-
   }
 
-*{
-    margin:0 ;
-    padding:0;
-    box-sizing: border-box;
-}
 
+  /*header*/
   header{
     display:flex;
-    flex-direction: column;
-  
-}
-.item .itemLista{
-  color: white;
-  border: 2px solid white;
-  background-color: blue;
-  opacity: 0.5;
-  border-radius: 20px;
-  font-weight: 700;
-  width: auto;
-  height: 60px;
-  text-align: center;
-  padding: 20px;
-
+    flex-direction: column; 
 }
 
 
- .div_logo, h1, h2, summary {
-    text-align: center;
-    background:transparent;
 
-  }
-
+  /*ANIMAÇÕES*/
 .logo{
-   
     padding: 40px 5px 5px 5px;
     animation: animaLogo;
     animation-duration: 8s;
-    animation-delay: 2s;
-     
-    
+    animation-delay: 2s;   
 }
 
 .logoSquad8{
@@ -75,23 +52,19 @@ body {
   animation: animaLogo;
   animation-duration: 8s;
   animation-delay: 2s;
-  
 }
 
-/*animaçao do logo squad 8*/
 @keyframes animaLogo {
   
   0% { transform: scale(1); }
   50% { transform: scale(1.2); }
   75% { transform: scale(1.9); }
   100% { transform: scale(1); }
-
-
-
 }
+/*fim animações*/
 
 
-
+/* imagens, logos*/
 .imgDisney {
   width:15rem;
   padding: 0px 5px 5px 5px;
@@ -108,49 +81,74 @@ body {
   flex-wrap: nowrap;
   padding-bottom: 20px;
   
-
 }
 
+section details img  {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: 1px solid rgb(91, 91, 91);
+  box-shadow: 2px 2px 5px #2EC4B6;
+  display: block;   
+}
+
+.container_perfil_pessoal{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content:  space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+  padding: 5px 1px 2px 5px;
+  background: rgba(0,0,0,0.5);
+}
+
+.foto {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: 1px solid rgb(91, 91, 91);
+  display: block;
+  border-radius: 50%;
+}
+
+.logo_campinho_SobreProjeto{
+  width:15vw;
+
+}
+.div_sobreProjeto h3 {
+  color: #2a438f;
+  
+}
+.div_sobreProjeto h5 {
+  color:white;
+}
+  /* fim imagens, logos*/
+
+  .section_details_div_alunos{
+    padding-bottom: 60px;
+
+  }
+
+/* h1,h2,h3,summary,details,h4, ul li */
+  
+ .div_logo, h1, h2  {
+  text-align: center;
+  background:transparent;
+
+}
 h1{
   font-family: 'Mouse Memoirs', sans-serif;
-  padding: 1px 5px 20px 5px;
-  padding-top: 10px;
+  padding: 20px 5px 0px 5px;
+  padding-top: 30px;
   font-size: 1.9em;
-  color:white;
+  color: white;
   text-align: center;
   opacity:0.9;
-
-
-
-    
 }
 
- section details img  {
-        height: 5rem;
-        width: 5rem;
-        border-radius: 50%;
-        border: 1px solid rgb(91, 91, 91);
-        box-shadow: 2px 2px 5px #2EC4B6;
-        display: block;   
-
-
- }
-      
-
- .container_perfil_pessoal{
-        display: inline-flex;
-        flex-direction: row;
-        justify-content:  space-evenly;
-        align-items: center;
-        align-content: center;
-        width: 100%;
-        margin: auto;
-        flex-wrap: wrap;
-        padding: 5px 1px 2px 5px;
-        background: rgba(0,0,0,0.5);
-
-      }
- 
 
   ul li {
       display: inline-flex;
@@ -176,7 +174,6 @@ h1{
  summary{
         font-weight: 600;
         width: 100%;
-        text-align: center;
         padding:10px;
         font-size: 1.3em;
         color: white;
@@ -193,6 +190,12 @@ details {
     details:hover{
       opacity:0.9;
     }
+
+    .detailsJS {
+      background-color: rgba(10,23,55,0.5);
+
+  }
+   
     
  h4{
       padding-top: 10px;
@@ -208,20 +211,31 @@ a{
 a:hover{
       opacity: 0.7;
   }
-  
-  
 
-.foto {
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  border: 1px solid rgb(91, 91, 91);
-  display: block;
-  border-radius: 50%;
+  /*texto personagem */
+  .personagem{
+    height: 100px;
 
-}
-     
-      
+  }
+ 
+  .subtitle{
+    font-size: 1.5rem;
+    color: white;
+  }
+  .title{
+    font-size: 1.1rem;
+    color:white;
+  }
+
+  .div_sobreProjeto {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
 
 @media screen and (max-width:580px) {
  
@@ -255,75 +269,29 @@ a:hover{
   h2{
     font-size: 1.3em;
   }
-   
 
+  .logo_campinho_SobreProjeto{
+    width:35vw;
   
+  }
+
+   .logo_campinho_SobreProjeto:hover{
+    width:35vw;
+    color:blue;
+  
+  }
+   
 }
 
 
- 
-      
-.detailsJS {
-        background-color: rgba(10,23,55,0.5);
-
-     }
-
- .footerIndex {
-      width: 100%;
-      height: 50px;
-      text-align: center;
-      background-color: rgba(10,23,55,0.5);
-      color:white;
-      display: grid;
-      place-items: center;
-      align-items:center;
-      opacity: 0.8;
-      margin: 5px 0px 0px 0px;
-      
-     
-     
-    }
-    footer p{
-      font-size: 1.3rem;
-    }
-
-    footer span{
-      color: yellow;
-    }
-
-    .footer_sobreProjeto{
-      width: 100%;
-      height: 50px;
-      text-align: center;
-      background-color: rgba(10,23,55,0.5);
-      color:white;
-      display: grid;
-      place-items: center;
-      align-items:center;
-      opacity: 0.8;
-      margin: 5px 0px 0px 0px;
-      bottom:0;
-      position:fixed;
-   
-    }
-
-     /*texto personagem h1*/
-    .personagem{
-      height: 100px;
-
-    }
-   
-    .subtitle{
-      font-size: 1.5rem;
-      color: white;
-    }
-    .title{
-      font-size: 1.1rem;
-      color:white;
-    }
+@media screen and (max-width: 900px){
+   .container{
+    margin-top:30px;
+  }
+}
 
 
-    /*CSS CARD-FLIP*/
+/*CSS CARD-FLIP*/
 .content {
   display: flex;
   margin: 0 auto;
@@ -333,8 +301,7 @@ a:hover{
   max-width: 1000px;
 }
 
-.card {
-  color: inherit;
+ .card {
   cursor: pointer;
   width: calc(33% - 2rem);
   min-width: calc(33% - 2rem);
@@ -344,13 +311,51 @@ a:hover{
   margin: 1rem;
   position: relative;
 }
-@media screen and (max-width: 800px) {
+
+  @media screen and (min-width:701px) and (max-width:900px) {
   .card {
-    width: calc(50% - 2rem);
+    height:320px;
+    min-height: 300px;
+    width:calc(35% - 4rem)
+  }
+
+  .logo_campinho_SobreProjeto{
+    width:23vw;
+  
+  }
+}
+ @media screen and (min-width:501px) and (max-width:700px) {
+  .card {
+    height: 250px;
+    min-height: 250px;
+    width:calc(37% - 2rem);
+  }
+
+  .logo_campinho_SobreProjeto{
+    width:27vw;
+  
   }
 }
 
+@media screen and (max-width: 500px) {
+  .card {
+    width:calc(80% - 2rem);
+  }
 
+  .subtitle{
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    max-width: 95%;
+    overflow-x: hidden;
+  
+  }
+  .title{
+    font-size: 1.4rem;
+    color:white;
+
+  }
+}
 
 .front,
 .back {
@@ -373,14 +378,13 @@ a:hover{
 .front {
   background-size: cover;
   padding: 2rem;
-  font-size: 1.5rem;
   font-weight: 600;
   color: #fff;
   overflow: hidden;
   border: 5px solid lightblue;
   border-radius: 30px;
-
 }
+
 .front:before {
   position: absolute;
   display: block;
@@ -391,8 +395,8 @@ a:hover{
   bottom: 0;
   opacity: 0.25;
   z-index: -1;
-
 }
+
 .card:hover .front {
   transform: rotateY(180deg);
 }
@@ -411,14 +415,11 @@ a:hover{
   
 }
 
-
-
 .card:hover .back {
   transform: rotateY(0deg);
   border: 5px solid white;
   border-radius: 30px;
   color: white;
-
 
 }
 .card:nth-child(even) .back {
@@ -428,9 +429,49 @@ a:hover{
 .card:nth-child(even):hover .back {
   transform: rotateY(0deg);
 }
-
 /*FIM CSS CARD-FLIP*/
 
+
+
+  /*Footer*/   
+  .footerIndex {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(10,23,55,0.5);
+    color:white;
+    display: grid;
+    place-items: center;
+    align-items:center;
+    opacity: 0.8;
+    margin: 5px 0px 0px 0px;
+    
+   
+   
+  }
+  footer p{
+    font-size: 1.3rem;
+  }
+
+  footer span{
+    color: yellow;
+  }
+
+  .footer_sobreProjeto{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(10,23,55,0.5);
+    color:white;
+    display: grid;
+    place-items: center;
+    align-items:center;
+    opacity: 0.8;
+    margin: 5px 0px 0px 0px;
+    bottom:0;
+    position:fixed;
+ 
+  }
 
 
 /* Botao Topo - Down */
@@ -442,7 +483,7 @@ a:hover{
   border-radius: 6px;
   padding: 5px;
   position: fixed;
-  bottom: 15px;
+  bottom: 60px;
   width: 80px;
   height: 40px;
   font-weight: bold;
@@ -459,12 +500,9 @@ a:hover{
 .btnFim{
  right: 5px;
  top: 10px;
- padding: 10px;
-
- 
+ padding: 10px; 
 }
-
-
+/*fim botão top e down */
 
 
   
