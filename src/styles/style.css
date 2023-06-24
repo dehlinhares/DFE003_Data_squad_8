@@ -118,8 +118,19 @@ section details img  {
   width:15vw;
 
 }
+
+.div_sobreProjeto{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .div_sobreProjeto h3 {
   color: #2a438f;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
   
 }
 .div_sobreProjeto h5 {
@@ -156,18 +167,22 @@ h1{
       flex-wrap: wrap;
     }
      
- h2 {
+ h2, h3, h4, h5 {
         font-size:1.1em;
         padding: 8px 8px 3px 8px;
         text-align: center;
         color:white;
-        
+        display: flex;
+        justify-content: center;
+    
       }
       
  h3{
         font-size: 1.1em;
         color: rgb(22, 21, 84);
         padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
       }
       
       
